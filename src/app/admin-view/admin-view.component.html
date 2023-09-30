@@ -1,0 +1,55 @@
+<section class="row">
+    
+    <h3 class="persis ml-2">Persistance settings:</h3>
+    <div class="container d-flex flex-row justify-content-start align-items-center m-1">
+        <span class="kliker badge bg-info text-dark p-2 m-1" (click)="changePersistenceSetting('session')">session</span>  
+        <span class="kliker badge bg-info text-dark  p-2 m-1" (click)="changePersistenceSetting('none')">none</span>
+        <span class="kliker badge bg-info text-dark  p-2 m-1" (click)="changePersistenceSetting('local')">local</span>
+    </div>
+        
+    
+    
+    <h1 class="display-3 text-primary text-center mt-4 mb-2">Zarejestrowani uzytkownicy</h1>
+    <ul class="list-group" *ngIf="tripDataService.allUsers !== null && (afAuth.user | async)">
+        <li class="list-group-item text-center"
+        style="list-style-type:none;" *ngFor="let user of users |iteratingObject;">
+          
+        <div class="forced-row d-flex justify-content-around align-items-center">
+            
+            
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <p class="p-1 fw-bold">{{users[user].email}}</p>
+                <p class="p-1">user status: <span
+                 [ngClass]="{'badge-danger': users[user].roles.banned ,  'badge-success': !users[user].roles.banned}">
+                <span *ngIf="users[user].roles.banned">zbanowany</span>
+                <span *ngIf="!users[user].roles.banned">nie zbanowany</span>
+                </span></p>  
+              </div>  
+              <div class="col d-flex flex-column justify-content-center align-items-center">
+                <p class="sm-font alert alert-danger p-1 m-1">Uprawnienia admina: 
+                <span class="spanik badge bg-danger text-white p-1 m-1" *ngIf="users[user].roles.admin" (click)="onClickChangingRoles(user,'admin')">wyłącz</span>
+                <span class="spanik badge bg-danger text-white p-1 m-1" *ngIf="!users[user].roles.admin" (click)="onClickChangingRoles(user,'admin')">włącz</span>     
+            </p>
+                <p class="sm-font alert alert-success  p-1 m-1">Uprawnienia menagera: 
+                    <span class="spanik badge bg-success text-white p-1 m-1" *ngIf="users[user].roles.manager" (click)="onClickChangingRoles(user,'manager')">wyłącz</span>
+                <span class="spanik badge bg-success text-white p-1 m-1" *ngIf="!users[user].roles.manager" (click)="onClickChangingRoles(user,'manager')">włącz</span>    
+                </p>
+                <p class="sm-font alert alert-primary  p-1 m-1">Uprawnienia klienta: 
+                    <span class="spanik badge bg-primary text-white p-1 m-1" *ngIf="users[user].roles.client" (click)="onClickChangingRoles(user,'client')">wyłącz</span>
+                    <span class="spanik badge bg-primary text-white p-1 m-1" *ngIf="!users[user].roles.client" (click)="onClickChangingRoles(user,'client')">włącz</span>    
+                  
+                </p>
+              </div> 
+        </div>
+        
+        
+        
+       
+        <p *ngIf="!users[user].roles.banned" class="ban alert alert-warning" (click)="onClickBanned(user)">Zbanuj usera</p>
+        <p *ngIf="users[user].roles.banned" class="ban alert alert-success" (click)="onClickBanned(user)">Odbanuj usera</p>    
+    </li>
+
+
+    </ul>
+
+</section>

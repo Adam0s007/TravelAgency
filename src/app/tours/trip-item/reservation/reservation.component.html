@@ -1,0 +1,4 @@
+<div class="button-container" *ngIf="maxVacancy > 0">
+    <button class="plus" (click)="makeReservation()" [disabled]="vacanties === 0" [ngClass]="{'disabled': vacanties ===0 }">+</button>
+    <button class="minus"(click)="removeReservation()"[disabled]="vacanties === maxVacancy || !checkIfInBasket()"[ngClass]="{'disabled': vacanties === maxVacancy || !checkIfInBasket() }">-</button>
+</div>

@@ -1,0 +1,68 @@
+<section class="main-container">
+    <div class="row">
+        <div class="column">
+            <label for="name">trip name</label>
+            <input type="text" id="name" [(ngModel)]="filteredName" (ngModelChange)="(sendFilter())">
+           </div>
+            <div class="column localization">
+                <button class="btn btn-info" id="destination" (click)="getData()">locations (click to display)</button>
+                    <!-- tworzenie kontenera na wycieczki ktore chcemy-->
+                    <div class="container-scrolling">
+                        <div class="button-container" *ngFor="let trip of tripsData;let i = index">
+                            <button class="tripName" 
+                            *ngIf="trip !== undefined"
+                            (click)="toggleThis(trip,i)" 
+                            [ngClass]="{'disabled':flags[i]}"
+                            >{{trip.destination}}</button>
+                        </div>     
+                    </div> 
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="column">
+                <label for="minPrice">min price</label>
+                <input type="number" id="minPrice" [(ngModel)]="filteredMinPrice"   (ngModelChange)="(sendFilter())" [placeholder]="getLimitMinPrice()">
+                <label for="maxPrice">max price</label>
+                <input type="number" id="maxPrice" [(ngModel)]="filteredMaxPrice"  [min]="filteredMinPrice"  (ngModelChange)="(sendFilter())"[placeholder]="getLimitMaxPrice()">
+            </div>
+            <div class="column">
+                <label for="startDate">starting date</label>
+                <input type="date" id="startDate" [(ngModel)]="filteredStartDate"  (ngModelChange)="(sendFilter())">
+                <label for="endDate">ending date</label>
+                <input type="date" id="endDate" [(ngModel)]="filteredEndDate"  (ngModelChange)="(sendFilter())">
+            </div>
+        </div>
+            
+    <div class="column">
+        <div class="column" style="flex-direction:column;">
+            <label for="rate">trip rating</label>
+            <div class="container con-rating">
+                <button class="rating" 
+                *ngFor="let rate of flagsRating;let i = index"
+                (click)="toggleThisRating(i)" 
+                [ngClass]="{'disabled':flagsRating[i]}"
+                >{{i}}</button>
+    
+        </div>
+        </div>
+    
+        <div class="column d-flex flex-row justify-content-center align-items-center ">
+            
+            <div class="container con-status">
+                <button class="status" 
+                *ngFor="let status of flagsStatus;let i = index"
+                (click)="toggleThisStatus(i)" 
+                [ngClass]="{'disabled':status}"
+                >{{statusMessage[i]}}</button>
+            </div>
+        </div>
+    
+        <div class="checkdiv">
+            <label for="check">only available places</label>
+            <input type="checkbox" id="check" [(ngModel)]="checkingVacancies"  (ngModelChange)="(sendFilter())">
+        </div> 
+    </div>
+
+
+</section>

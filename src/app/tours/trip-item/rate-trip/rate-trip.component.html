@@ -1,0 +1,9 @@
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="d-flex flex-row justify-content-center align-items-center">
+        <div class="heart-container" *ngFor="let idHeart of heartsIds; let i = index" (click)="onRating(i)" [ngClass]="{'red': i < rate, 'disabled': AuthService.myUserRole.banned || AuthService.myUserRole.admin || AuthService.myUserRole.manager || !AuthService.checkPermission(tripsDataService.getTrips()[ratingId])}">
+            <label class="heart" for="rate1" ></label>
+            </div>
+    </div>
+<span *ngIf="!AuthService.myUserRole.banned &&  AuthService.myUserRole.client &&  !AuthService.checkPermission(tripsDataService.getTrips()[ratingId])" class="text-warning">ocenianie bedzie mozliwie gdy zakupisz wycieczkę</span>
+<span *ngIf="AuthService.myUserRole.banned" class="text-danger">zostales zbanowany wiec nie ocenisz wycieczki!</span>
+</div>

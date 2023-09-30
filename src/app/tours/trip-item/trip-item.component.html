@@ -1,0 +1,43 @@
+
+<section class="card"*ngIf="tripElement !== undefined"
+[ngClass]="{'warning-section':vacanties < constraint, 
+'disabled-section': vacanties === 0,
+'min-available-value': getMinActualPriceIndex() === elementId,
+'max-available-value': getMaxActualPriceIndex() === elementId
+}">
+<div class="card_content">
+    <picture class="header">
+        
+    <div class="titles">   
+        <h1 >{{tripElement.name | uppercase}}</h1>
+    </div> 
+    <img [src]="tripElement.picture" 
+    alt="tu miało być zdjęcie" 
+    [ngStyle]="{'max-height':'150px'}"  
+    alt="" 
+    >
+ 
+</picture>
+    <figcaption class="content">
+        <!-- elementy tutaj to takie a w moim pliku -->
+            <li>Max ilość miejsc: <span>{{tripElement.maxPeople}}</span></li> 
+            <li *ngIf="vacanties > 0 && vacanties < tripElement.maxPeople">Ilość wolnych miejsc: <span>{{vacanties}}</span></li>
+            <li *ngIf="vacanties === 0" class="warning">Brak wolnych miejsc.</li>
+            <li *ngIf="vacanties === tripElement.maxPeople" class="green-info">Wszystkie miejsca są wolne</li>
+        
+            <div class="row d-flex flex-row">
+                <remove-item *ngIf="AuthService.userLoggedIn && (AuthService.myUserRole.manager || AuthService.myUserRole.admin)" class="row-item" [elemId]="elementId"></remove-item>
+                <reservation *ngIf="statusList[elementId] === 0 && AuthService.myUserRole.client" class="row-item" [vacanties] = "vacanties" [maxVacancy]="maxVacancy" [tripName]="tripElement.name"  (clickedButton)="onClickedButton($event)" ></reservation>    
+                <div class="row d-flex flex-row justify-content-center text-warning fw-bold" *ngIf="statusList[elementId] === 1">wycieczka ta właśnie się odbywa!</div>
+                <div class="row d-flex flex-row justify-content-center text-danger fw-bold" *ngIf="statusList[elementId] === 2">wycieczka ta już się odbyła!</div>
+            </div>
+            <button *ngIf="AuthService.userLoggedIn"(click)="onPictureClick()">see tour details</button>
+    </figcaption>
+</div>
+
+
+</section>
+
+
+
+

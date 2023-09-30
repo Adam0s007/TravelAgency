@@ -1,0 +1,164 @@
+{
+    "trips": [{
+        "name":"Chorwacja best Trip",
+        "destination":"Chorwacja",
+        "startDate":"2022-12-18",
+        "endDate":"2022-12-31",
+        "unitPrice":2000,
+        "maxPeople":50,
+        "description":"A very nice trip through the whole of Croatia. We will get to know the most interesting places in this wonderful country.",
+        "picture":"https://escales.ponant.com/wp-content/uploads/2021/01/la-une-1-croatie.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    },{
+        "name":"Wycieczka do Gdańska",
+        "destination":"Gdańsk",
+        "startDate":"2022-12-25",
+        "endDate":"2023-01-03",
+        "unitPrice":100,
+        "maxPeople":30,
+        "description":"Kilkudniowa wycieczka do Gdańska. W ofercie nastawieni jesteśmy głównie na zwiedzanie tego cudownego miasta wraz z przewodnikiem.",
+        "picture":"https://www.polska.travel/images/pl-PL/glowne-miasta/gdansk/gdansk_motlawa_wieczorem_1170.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    },{
+        "name":"MALIA - DESSOLE BEACH",
+        "destination":"Heraklion",
+        "startDate":"2023-05-25",
+        "endDate":"2023-06-10",
+        "unitPrice":2200,
+        "maxPeople":50,
+        "description":"Dessole Beach - usytuowany jest pośród wspaniałych, zielonych ogrodów w spokojnym zakątku tuż przy plaży. 10-minutowy spacer dzieli hotel od centrum miasta Malia. W odległości ok. 32 km znajduje się lotnisko w Heraklionie.",
+        "picture":"https://cf.bstatic.com/xdata/images/hotel/max1024x768/80562994.jpg?k=c90e902dfc797274b24772d648676b13712f7e11f0af8535c5b8ce7262fe65cc&o=&hp=1",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+        },{
+        "name":"Tydzień w Rudawach Janowickich",
+        "destination":"Rudawy Janowicke",
+        "startDate":"2023-01-18",
+        "endDate":"2023-01-25",
+        "unitPrice":150,
+        "maxPeople":30,
+        "description":"Zapraszamy na niesamowitą wycieczkę do Rudawa Janowickich. Zdobędziemy dwa szczyty do Korony Gór Polski (Skalnik i Skopiec) oraz majestatyczne Sokoliki i Ostrą Małą. odwiedzimy najstarsze polskie schronisko turystyczne „Szwajcarka” w stylu tyrolskim i wiele więcej!",
+        "picture":"https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    },{
+        "name":"Kołobrzeg wita!",
+        "destination":"Kołobrzeg",
+        "startDate":"2022-06-28",
+        "endDate":"2022-07-05",
+        "unitPrice":1000,
+        "maxPeople":60,
+        "description":"Zapraszamy na wycieczkę po atrakcjach Kołobrzegu",
+        "picture":"https://ocdn.eu/pulscms-transforms/1/_Zwk9kpTURBXy9iZTQyMDRkNGQ3YzlmYTg1NTBkYjJmNWJhOWI4MTBjZS5qcGeUlQMDAM0VUc0L_pMFzQSwzQKklQfZMi9wdWxzY21zL01EQV8vMjMzN2M5ZmQ2YjkzMWVlNmNiMGQyM2RjYmEyNThhOWQucG5nAMIAkwmmMWNhNzkxBt4AAaEwAQ/kolobrzeg-i-okolice-ciekawostki-zwiedzanie-historia-co-zobaczyc-przewodnik.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    },{
+        "name":"Cesenatico wita",
+        "destination":"Cesenatico",
+        "startDate":"2022-07-25",
+        "endDate":"2022-08-05",
+        "unitPrice":1500,
+        "maxPeople":30,
+        "description":"Discover the fascinating history, superb restaurants and interesting maritime museum of this pretty coastal town.",
+        "picture":"https://a.travel-assets.com/findyours-php/viewfinder/images/res70/409000/409504-Cesenatico.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    },{
+        "name":"Weekend w Rudawach Janowickich",
+        "destination":"Rudawy Janowickie",
+        "startDate":"2022-07-25",
+        "endDate":"2022-07-31",
+        "unitPrice":30,
+        "maxPeople":10,
+        "description":"Zapraszamy na zimowy weekend w Rudawach Janowickich i Górach Kaczawskich.",
+        "picture":"https://podroze.smcloud.net/t/image/t/133296/gory-w-polsce-gory-kaczawskie_327139.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    },{
+        "name":"Regular Tour to Auschwitz Birkenau",
+        "destination":"Auschwitz Birkenau",
+        "startDate":"2023-08-01",
+        "endDate":"2023-08-01",
+        "unitPrice":20,
+        "maxPeople":36,
+        "description":"Take part in our Regular Group Tour to Auschwitz that runs every day from the centrally located meeting point in Warsaw (Warsaw Marriott Hotel)",
+        "picture":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Auschwitz_main_gate.jpg/1200px-Auschwitz_main_gate.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    },{
+        "name":"Swidnica and Ksiaz Castle Tour",
+        "destination":"Swidnica in Wroclaw",
+        "startDate":"2023-10-01",
+        "endDate":"2023-10-01",
+        "unitPrice":17,
+        "maxPeople":40,
+        "description":"During this half day tour from Wroclaw you will see probably two most important monuments in whole Lower Silesia region.",
+        "picture":"https://static.saltinourhair.com/wp-content/uploads/2021/01/23104133/most-beautiful-castle-poland.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    },{
+        "name":"Czocha Castle and Kliczkow Castle Tour",
+        "destination":"Czocha Castle",
+        "startDate":"2023-11-01",
+        "endDate":"2023-11-02",
+        "unitPrice":35,
+        "maxPeople":35,
+        "description":"The region of Lower Silesia is very attractive and famous for its several charming castles worth visiting while your stay in our country.",
+        "picture":"https://zamekczocha.com/wp-content/uploads/xzwiedzanie-zamku.jpg.pagespeed.ic.uiXm1SgCki.jpg",
+        "forSlider":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9eSw2A6S3AxNAgoJRJ7QjiWsiEfXAuByIY1O8J18-4eco6ocOEF7oaZPW3c0Sk6Uhq3I&usqp=CAU",
+            "https://visitgdansk.com/en/download/2022-12/2771.jpg",
+            "https://www.theblondtravels.com/wp-content/uploads/2016/09/gdansk-riverside-port-crane-768x430.jpg",
+            "https://meteor-turystyka.pl/images/places/0/14.jpg",
+            "https://hasajacezajace.com/wp-content/uploads/2021/11/rudawy-janowickie-4.jpg"
+        ]
+    }
+]
+}

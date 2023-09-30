@@ -1,0 +1,121 @@
+
+<section class="mb-5 pb-5">
+    <form class="container-fluid" (ngSubmit)="onSubmit()" [formGroup]="modify" (ngSubmit)="onSubmit()">
+        <div class="col-auto">
+            <label for="identif" class="col-form-label mb-1" >podaj nazwę wycieczki do modyfikacji:</label>
+            <input 
+            type="text" 
+            id="identif"
+            name="identif"
+            class="form-control"
+            formControlName="identif">
+            </div>
+
+        <div class="col-auto">
+        <label for="name" class="col-form-label mb-1" >nazwa wycieczki:</label>
+        <input 
+        type="text" 
+        id="name"
+        name="name"
+        class="form-control"
+        formControlName="name">
+        <span class="help-block" *ngIf="!modify.controls['name'].valid && modify.controls['name'].touched">Proszę wpisać nazwę wycieczki. Pamiętaj, że musi być oryginalna</span>
+        </div>
+        <div >
+        <label for="destination" class="col-form-label mb-1">Podróż do:</label>
+        <input 
+        type="text" 
+        id="destination"
+        name="destination"
+        formControlName="destination"
+        class="form-control"
+        >
+        <span class="help-block" *ngIf="!modify.controls['destination'].valid && modify.controls['destination'].touched">Proszę wpisać cel podróży.</span>
+        </div>
+        <div>
+            <label for="startDate" class="col-form-label mb-1">Początek wycieczki:</label>
+            <input 
+            type="date" 
+            id="startDate"
+            name="startDate"
+            class="form-control"
+            formControlName="startDate">
+            <span class="help-block" *ngIf="!modify.controls['startDate'].valid && modify.controls['startDate'].touched">Proszę zaznaczyć poprawną datę rozpoczęcia wycieczki.</span>
+        </div>
+        <div>
+            <label for="endDate" class="col-form-label mb-1">Koniec wycieczki:</label>
+            <input 
+            type="date" 
+            id="endDate"
+            name="endDate"
+            formControlName="endDate"
+            class="form-control"
+            >
+            <span class="help-block" *ngIf="!modify.controls['endDate'].valid && modify.controls['endDate'].touched">Proszę zaznaczyć poprawną datę końca wycieczki.</span>
+        </div>
+        <div>
+            <label for="unitPrice" class="col-form-label mb-1">Cena jednostkowa: </label>
+            <input 
+            type="number" 
+            id="unitPrice"
+            name="unitPrice"
+            formControlName="unitPrice"
+            class="form-control"
+            min="0">
+            <span class="help-block" *ngIf="!modify.controls['unitPrice'].valid && modify.controls['unitPrice'].touched">Proszę wpisać poprawną cenę jednostkową.</span>
+        </div>
+        <div>
+            <label for="maxPeople" class="col-form-label mb-1">maksymalna liczba ludzi: </label>
+            <input type="number" 
+            id="maxPeople"
+            name="maxPeople"
+            formControlName="maxPeople"
+            class="form-control"
+            min="5">
+            <span class="help-block" *ngIf="!modify.controls['maxPeople'].valid && modify.controls['maxPeople'].touched">Proszę wpisać poprawną liczbę ludzi.</span>
+        </div> 
+        <div>
+            <label for="description" class="col-form-label mb-1">Opis wycieczki </label>
+            <textarea  
+            id="description" 
+            rows="4" 
+            cols="30"
+            name="description"
+            formControlName="description"
+            class="form-control"
+            ></textarea>
+            <span class="help-block" *ngIf="!modify.controls['description'].valid && modify.controls['description'].touched">Proszę wpisać opis wycieczki.</span>
+        </div> 
+        <div>
+            <label for="picture" class="col-form-label mb-1">link do obrazka</label>
+            <input 
+            type="text" 
+            id="picture"
+            name="picture"
+            formControlName="picture"
+            class="form-control"
+            >
+            <span class="help-block" *ngIf="!modify.controls['picture'].valid && modify.controls['picture'].touched">Proszę wpisać poprawny link do obrazka</span>
+        </div>
+        <div>
+            <label for="slider"  class="col-form-label mb-1">linki do innych obrazków do slider'a: (oddzielaj przecinkiem)</label>
+            <input 
+            type="text" 
+            id="slider"
+            name="slider"
+            formControlName="slider"
+            class="form-control"
+            >
+            <span class="help-block" *ngIf="!modify.controls['slider'].valid && modify.controls['slider'].touched">Proszę wpisać linki do obrazków</span>
+        </div>
+    
+        <button 
+        class="add-button" 
+        type="button"
+        [disabled]="!modify.valid"
+        [ngClass]="{'disabled': !modify.valid}"
+        (click)="onSubmit()">Zmodyfikuj wycieczkę!</button>
+    
+    </form>
+    
+    </section>

@@ -1,0 +1,90 @@
+<header *ngIf="(afAuth.user | async) && AuthService.myUserRole.client"> 
+    <div class="group-1">
+            <span class="text-secondary" style="margin-right:5px;">total: {{myBasketInfo["total"]}} {{denomination}}</span>
+            <span class="text-secondary">quantity: {{myBasketInfo["quantity"]}}</span>
+            
+        </div>
+            <div class="group-1" >
+                <tours-reserved class="tours"></tours-reserved>
+            </div>
+        <div class="group-2">
+            <span  class="text-info latest-trip"><fa-icon 
+                [icon]="faBell" 
+                (click)="onClickNotification()"  
+                style="cursor:pointer;"
+                [ngStyle]="newNotifTrip ? {'color': 'red'}: {'color':'lightblue'}"
+                ></fa-icon> <span class="notific" *ngIf="showNotification" (click)="onClickNotification()" style="cursor:pointer;"> {{latestTripMess}}</span>  </span>
+            
+        </div>
+</header>
+
+<main>
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navik d-flex justify-content-around">
+            <ul class="navbar-nav in-row text-center p-2">
+              <li class="nav-item"
+              routerLinkActive="active" 
+              [routerLinkActiveOptions]="{exact:true}"
+              >
+                <a class="nav-link" routerLink="/home">Home</a>
+              </li>
+              <li class="nav-item"
+              routerLinkActive="active"
+              >
+                 <a class="nav-link" routerLink="tours">oferty</a>
+              </li>
+              
+              <li class="nav-item"
+              routerLinkActive="active"
+              *ngIf="(afAuth.user | async) && (AuthService.myUserRole.client)"
+              >
+                <a class="nav-link" routerLink="basket">twój koszyk</a>
+              </li>
+              
+              <li class="nav-item"
+              routerLinkActive="active"
+              *ngIf="(afAuth.user | async) && (AuthService.myUserRole.client)"
+              >
+                <a class="nav-link" routerLink="history">historia wycieczek</a>
+              </li> 
+              
+              <li class="nav-item d-flex flex-column" 
+              *ngIf="(afAuth.user | async) && AuthService.myUserRole.admin"
+              routerLinkActive="active"
+              > 
+              <a class="nav-link text-danger" style="font-weight:bold;" routerLink="admin-view">Admin View</a>
+              </li>
+              
+              
+              <li class="nav-item d-flex flex-column" 
+              *ngIf="(afAuth.user | async) && (AuthService.myUserRole.manager || AuthService.myUserRole.admin)"
+              routerLinkActive="active"
+              > 
+              <a class="nav-link" routerLink="trip-manager">Trip Manager</a>
+              </li>
+             
+
+              <!-- admin-view -->
+              <li class="nav-item d-flex flex-column" *ngIf="(afAuth.user | async)"> 
+                <span *ngIf="(afAuth.user | async)" class="text-info user-details"><fa-icon [icon]="faUser"></fa-icon > {{myUser.email}}</span> 
+                  <span *ngIf="AuthService.myUserRole.admin" class="text-danger fw-bold">(Admin)</span>
+                  <span *ngIf="AuthService.myUserRole.manager && !AuthService.myUserRole.admin" class="text-success fw-bold">(Manager)</span>
+              </li>
+              <li class="nav-item"  *ngIf="(afAuth.user | async)" (click)="logOut()">
+                <a class="nav-link" style="cursor:pointer;">Logout</a>
+              </li>
+              <li class="nav-item"
+              routerLinkActive="active" *ngIf="!(afAuth.user | async)"
+              >
+                <a class="nav-link" routerLink="login" >Login</a>
+              </li> 
+              <li class="nav-item"
+              routerLinkActive="active" *ngIf="!(afAuth.user | async)"
+              >
+                <a class="nav-link" routerLink="register">Register</a>
+              </li> 
+            </ul>
+      </nav>
+
+    <router-outlet class="cont"></router-outlet> 
+</main>

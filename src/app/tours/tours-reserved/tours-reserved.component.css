@@ -1,0 +1,17 @@
+p{
+    border:2px solid black;
+    border-radius:15px;
+    padding:5px;
+    font-weight:bold;
+   margin:auto 0;
+}
+
+.green-flag{
+background-color:rgb(54, 255, 81);
+color:black;
+}
+
+.red-flag{
+    background-color:rgb(185, 0, 0);
+    color:white;
+    }

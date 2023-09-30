@@ -1,0 +1,14 @@
+
+<section class="filter d-flex flex-row justify-content-center align-items-center ">
+    
+    <p class="text-info m-2 fs-1 fw-bold">Filtruj wycieczki:</p>
+    
+    <div class="container con-status m-2">
+        <button class="status" 
+        *ngFor="let status of flagsStatus;let i = index"
+        (click)="toggleThisStatus(i)" 
+        [ngClass]="{'disabled':status}"
+        >{{statusMessage[i]}}</button>
+    </div>
+</section>
+
