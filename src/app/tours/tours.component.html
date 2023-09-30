@@ -1,0 +1,12 @@
+<main>
+
+    <filter-trips class="filtered">         
+    </filter-trips>
+    <div class="container">
+        <trip-item *ngFor="let trip of getAllTrips() | filter:filteredData.filteredName:filteredData.filteredDestination:filteredData.filteredStartDate:filteredData.filteredEndDate:filteredData.filteredMinPrice:filteredData.filteredMaxPrice:filteredData.filteredRate:filteredData.checkingVacancies:filteredData.locations:filteredData.stars:filteredData.flagsStatus" 
+        [tripElement] = "trip" 
+        [elementId]="getId(trip.name)"
+        [ngStyle]="{'display':trip !== null ? 'flex': 'none' }"
+        class="item"></trip-item>
+    </div>    
+</main>

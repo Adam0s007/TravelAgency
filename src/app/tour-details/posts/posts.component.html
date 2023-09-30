@@ -1,0 +1,49 @@
+
+<section *ngIf="(checkPermission() || AuthService.myUserRole.manager) && !AuthService.myUserRole.banned">
+  <form (ngSubmit)="onSubmit()" [formGroup]="addPost" (ngSubmit)="onSubmit()">
+      <div class="column">
+      <label for="nick">twoj nick:</label>
+      <input 
+      type="text" 
+      id="nick"
+      name="nick"
+      formControlName="nick"
+     
+      >
+      </div>
+
+  
+      
+      <div class="column">
+          <label for="text">Opinia: </label>
+          <textarea  
+          id="text" 
+          rows="4" 
+          cols="30"
+          name="text"
+          formControlName="text"
+          ></textarea>
+          </div> 
+      
+      <button 
+      class="add-button" 
+      type="button"
+      (click)="onSubmit()">Dodaj opinię!</button>
+      
+      <div class="alert alert-danger column" role="alert" *ngFor="let error of errors">
+          {{error}}
+        </div>
+
+  </form>
+ </section>
+ <span *ngIf="!AuthService.myUserRole.banned && AuthService.myUserRole.client && !AuthService.checkPermission(tripsDataService.getTrips()[elementId])" class="text-danger">dodawanie postow bedzie mozliwie gdy zakupisz wycieczke!</span>
+ <span *ngIf="AuthService.myUserRole.banned" class="text-danger">nie dodasz posta bo jestes zbanowany!</span> 
+
+
+<ul class="list-group">
+    <li class="list-group-item active p-2 text-center">Dodane posty</li>
+    <li class="list-group-item simple-li " *ngFor="let post of posts">
+      <h3 class="display-7">{{post.nick}}</h3>
+      <p>{{post.text}}</p> 
+    </li>
+</ul>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width:100vw;
+    overflow-x:hidden;
+}
+
+html{
+    width:100%
+}

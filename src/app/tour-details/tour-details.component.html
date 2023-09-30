@@ -1,0 +1,51 @@
+<section>
+    <div class="group">
+        <ul class="list-group text-center">
+            <li class="list-group-item active bg-dark" aria-current="true">Podstawowe informacje</li>
+            <li class="list-group-item text-primary">Nazwa wycieczki: <span>{{tripElement.name}}</span></li>
+            <li class="list-group-item  text-primary">Podróż do: <span>{{tripElement.destination | uppercase}}</span></li>
+            <li class="list-group-item text-primary">Od <span>{{tripElement.startDate}}</span> do <span>{{tripElement.endDate}}</span></li>
+            <li class="list-group-item text-primary">Cena za osobę to <span>{{tripElement.unitPrice}}</span> {{denomination}}</li>
+          </ul>
+        
+        <div class="description">
+            <p class="desc">{{tripElement.description}}</p>
+            <div class="rate text-center  mt-2">
+                <h3 class="display-7 text-primary">Oceń wycieczkę:</h3>
+                <rating [ratingId]="elementId"></rating>
+            </div>
+        </div>
+    </div>
+    <div class="simple-row"></div>
+        <div class="group">
+            <div class="slider d-flex flex-row align-items-center justify-content-center gap-2">
+                <button class="btn btn-secondary p-2 slider-btn" (click)="makeLeftMoveInSlider()">previous</button>
+                <picture>
+                <img [src]="slider[SliderPosition]" alt="picture">
+                </picture>
+                <button class="btn btn-secondary p-2 slider-btn" (click)="makeRightMoveInSlider()">next</button>
+            </div>
+        
+        
+            <ul class="list-group text-center">
+            <li>Max ilość miejsc: <span>{{tripElement.maxPeople}}</span></li>
+            <li *ngIf="vacanties > 0 && vacanties < tripElement.maxPeople">Ilość wolnych miejsc: <span>{{vacanties}}</span></li>
+            <li *ngIf="vacanties === 0" class="warning">Brak wolnych miejsc.</li>
+            <li *ngIf="vacanties === tripElement.maxPeople" class="green-info">Wszystkie miejsca są wolne</li>
+            <div class="row d-flex flex-row justify-content-center" *ngIf="statusList[elementId] === 0 && AuthService.myUserRole.client">
+                <reservation class="reserve" [vacanties] = "vacanties" [maxVacancy]="maxVacancy"  [tripName]="tripElement.name"  (clickedButton)="onClickedButton($event)" ></reservation>    
+            </div>
+            <div class="row d-flex flex-row justify-content-center text-warning fw-bold" *ngIf="statusList[elementId] === 1">wycieczka ta właśnie się odbywa!</div>
+            <div class="row d-flex flex-row justify-content-center text-danger fw-bold" *ngIf="statusList[elementId] === 2">wycieczka ta już się odbyła!</div>
+            
+        </ul>
+    
+    </div>
+
+    <button class="btn btn-success btn-lg return" (click)="returnToPosts()">Wróć</button>
+    <div class="simple-row"></div>
+    
+    <app-posts [elementId]="elementId"></app-posts>
+    
+    
+</section>

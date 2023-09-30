@@ -1,0 +1,49 @@
+.heart {
+    background-color: rgb(77, 255, 77);
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+    scale:0.4;
+    margin-left:-10px;
+    cursor:pointer;
+  }
+  .heart:first-of-type{
+    margin-left:0px;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: rgb(77, 255, 77);
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+  }
+  
+  .heart:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 15px;
+    top: 0;
+  }
+
+  .red{
+    filter: hue-rotate(245deg)
+  }
+  .heart-container{
+    
+    height:30px;
+    cursor:pointer;
+  }
+
+  .disabled{
+    opacity:0.3;
+  }

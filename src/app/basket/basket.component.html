@@ -1,0 +1,32 @@
+<section class="list-group">
+    
+<!-- <div class="basket-item list-group-item" *ngFor="let trip of getTrips(); let i = index">
+    <h1>{{trip.name}}</h1>
+    <p>Ilosc biletów: {{getTripsCounter()[trip.name]}}</p>
+    <p class="bold">{{trip.description }}</p>
+    <p class="bold"> {{trip.startDate}}  - {{trip.endDate}}</p>
+</div> -->
+
+<ul class="list-group">
+    <li class="list-group-item active text-center p-2 mt-2">Dodane wycieczki do koszyka</li>
+    <li class="list-group-item p-3" *ngFor="let trip of getTrips(); let i = index">
+      <h3 class="display-7">{{trip.name}}</h3>
+      
+      <p class="bold">{{trip.description }}</p>
+      <p class="bold"> {{trip.startDate}}  - {{trip.endDate}}</p>
+      <p>Ilosc biletów: {{getTripsCounter()[trip.name]}}</p>
+      <p>Cena calkowita: {{trip.unitPrice * getTripsCounter()[trip.name]}} {{denomination}}</p>
+      <div class="row d-flex flex-row justify-content-around">
+        <button class="btn btn-danger releaser" (click)="removeFromBasket(i)">release reservation</button>
+        <button class="btn btn-primary releaser" (click)="buyOnlyThis(i)">buy product</button>
+      </div>
+    </li>
+</ul>
+
+
+
+
+<button class="btn btn-success buy" (click)="onClickedPurchase()" [ngClass]="{'disabled': getTrips().length===0}" [disabled]="getTrips().length===0">Zakup wszystkie</button>
+
+</section>
+

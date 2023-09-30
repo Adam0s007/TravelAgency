@@ -1,0 +1,88 @@
+*{
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:5px;
+    
+}
+
+.in-row{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    gap:20px;
+    width:100vw;
+    background:rgb(238, 238, 238);
+    position:sticky;
+    top:0px;
+    z-index:999;
+
+}
+main{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    width:100vw;
+}
+
+.view-changer-button{
+    border-radius:15px;
+    border:1px solid black;
+    background:white;
+    padding:10px 15px;
+    font-weight:black;
+    transition:all 0.3s ease-out;
+    cursor:pointer;
+    width:200px;
+}
+
+.view-changer-button:hover{
+    background:black;
+    color:white;
+    transform:translateY(-1px);
+}
+h1{
+    font-size:20px;
+}
+
+.filtered{
+    position:sticky;
+    top:0;
+    left:0;
+    width:60%;
+    gap:5px;
+    padding:5px;
+    margin:5px;
+    
+}
+
+
+
+
+#check-basket{
+    width:100px;
+}
+.disable{
+    z-index:-1;
+    display:none;
+}
+.myBasket{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    
+}
+

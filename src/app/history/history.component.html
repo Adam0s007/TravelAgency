@@ -1,0 +1,21 @@
+
+
+ <section class="row"> 
+     
+        <app-filter-history></app-filter-history>
+    <h1 class="display-3 text-primary text-center mt-4 mb-2">Zakupione wycieczki</h1>
+        <ul class="list-group">
+            <li class="list-group-item text-center"
+            style="list-style-type:none;"
+            *ngFor="let tour of boughtTours | filterHistory:filteredTours;"
+            >
+               <p>Wycieczka {{tour.trip.name}} do {{tour.trip.destination}}, termin: {{tour.trip.startDate}} - {{tour.trip.endDate}}</p> 
+               <p>Zakupiona w terminie: {{tour.boughtDate}}</p>    
+               <p>Ilosc biletów: {{tour.tickets}}</p>
+               <p>Cena: {{tour.tickets * tour.trip.unitPrice}} {{denomination}}</p>
+               <p>Status wycieczki <span
+                [ngClass]="{'badge-danger': tour.status === 0, 'badge-warning': tour.status === 1, 'badge-success': tour.status === 2}">{{statusMessage[tour.status]}}</span></p> 
+            </li>
+        </ul>
+    
+</section>
